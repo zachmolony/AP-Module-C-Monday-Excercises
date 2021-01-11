@@ -2,8 +2,9 @@
 using namespace std; // 'std::' is now implied
 
 int temperatureConversion() {
+  const float KELVIN_ADDITION = 273.15;
   char convertTo; // var definitions
-	float convertedTemp, currentTemperature, kelvin; 
+	float convertedTemp, currentTemperature, kelvin;
 
   cout << "Please enter the starting temperature: ";
   while (!(cin >> currentTemperature)) { // if the cin parse fails then the inputted type was incorrect
@@ -16,14 +17,14 @@ int temperatureConversion() {
   cin >> convertTo; // assumes input will be valid as per spec
 
   if (convertTo == 'F' || convertTo == 'f') { 
-    kelvin = currentTemperature + 273.15; // kelvin calculation from base ceclius
+    kelvin = currentTemperature + KELVIN_ADDITION; // kelvin calculation from base ceclius
     convertedTemp = (1.8 * currentTemperature) + 32.0; // conversion formulae
     cout << currentTemperature << "°C is " << convertedTemp << "°F\n" << "Kelvin: " << kelvin;
   }
 
   else if (convertTo == 'C' || convertTo == 'c') {
     convertedTemp = (currentTemperature - 32) / 1.8; // conversion formulae
-    kelvin = convertedTemp + 273.15; // kelvin calculation from converted celcius
+    kelvin = convertedTemp + KELVIN_ADDITION; // kelvin calculation from converted celcius
     cout << currentTemperature << "°F is " << convertedTemp << "°C\n" << "Kelvin: " << kelvin;
   }
   else { // if an incorrect input i.e. not f/c/F/C is entered the program will close
