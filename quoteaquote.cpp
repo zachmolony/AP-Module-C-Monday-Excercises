@@ -10,7 +10,7 @@ bool hasInvalidCharacters(string input) { // function which checks if a given st
   return false; // if all chars are checked and nothing is detected, return false
 }
 
-int main() {
+int quoteAQuote() {
 	string quote, author; // define string vars for inputs
 
   while (quote.empty()) { // keep asking for input until the input is not empty
