@@ -3,7 +3,7 @@ using namespace std; // 'std::' is now implied
 
 int main() {
   char measure;
-  const float METRE_MULTIPLIER = 3.281;
+  const float METRE_MULTIPLIER = 3.281; // constant
 	float width, length, feetArea, metreArea;
 
   cout << "Press ‘F’ to input as feet.\nPress ‘M’ to input in metres.\n" << "Your choice: ";
